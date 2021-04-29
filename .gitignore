@@ -2,3 +2,7 @@
 *.png
 *.jpeg
 .ipynb_checkpoints/
+.spyproject/
+.idea/
+lfw/
+**models/
