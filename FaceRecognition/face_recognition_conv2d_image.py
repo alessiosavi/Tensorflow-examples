@@ -21,11 +21,7 @@ modelPath = "dnn_models/res10_300x300_ssd_iter_140000.caffemodel"
 detector = cv2.dnn.readNetFromCaffe(protoPath, modelPath)
 detector.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
 detector.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
-# load our serialized face embedding model from disk
-# print("[INFO] loading face recognizer...")
-# embedder = cv2.dnn.readNetFromTorch("dnn_models/openface.nn4.small2.v1.t7")
-# embedder.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-# embedder.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+
 #%% DEFINE VAR
 
 basedir = "lfw"

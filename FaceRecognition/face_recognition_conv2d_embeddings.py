@@ -51,8 +51,7 @@ def filter_single_face_dnn(img_path: str) -> List[np.ndarray]:
     faces = []
     img = cv2.imread(img_path)
     height, width = img.shape[:2]
-    blob = cv2.dnn.blobFromImage(cv2.resize(img, dsize=(
-        h, w), interpolation=cv2.INTER_LANCZOS4), 1.0, (h, w), (104.0, 117.0, 123.0))
+    blob = cv2.dnn.blobFromImage(cv2.resize(img, dsize=(h, w), interpolation=cv2.INTER_LANCZOS4), 1.0, (h, w), (104.0, 117.0, 123.0))
     detector.setInput(blob)
     faces3 = detector.forward()
     for i in range(faces3.shape[2]):
